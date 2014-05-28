@@ -1,6 +1,6 @@
 package ground;
 
-import gui.mainFrame;
+import gui.MainFrameGui;
 import agent.*;
 
 public class MainFrame {
@@ -17,7 +17,7 @@ public class MainFrame {
 		for(int i=0;i<50;i++){
 			list[i].start();
 		}
-		mainFrame frame = new mainFrame();
+		MainFrameGui frame = new MainFrameGui();
 		return;
 	}
 }
