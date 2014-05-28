@@ -1,10 +1,11 @@
 package gui;
 
 import java.awt.*;
-import javax.swing.JFrame;
+import javax.swing.*;
 
 public class MainFrameGui extends JFrame{
 	private static final int FWIDTH = 700, FHEIGHT = 700;
+	AgentGui[] agentList;
 	
 	public MainFrameGui(){
 //		JFrame frame = new JFrame("Frame Demo");
@@ -14,5 +15,11 @@ public class MainFrameGui extends JFrame{
 		this.setLayout(new BorderLayout());
 		return;
 	}
+	
+	public void msgDisplayBox(){
+		JButton mybutton = new JButton("My Button");
+		this.add(mybutton);
+	}
+	
 	
 }

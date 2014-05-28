@@ -5,7 +5,7 @@ import agent.*;
 
 public class MainFrame {
 	
-	
+	MainFrameGui myGui;
 	
 	public static void main(String args[]){
 		Agent[] list = new Agent[50];
@@ -17,7 +17,8 @@ public class MainFrame {
 		for(int i=0;i<50;i++){
 			list[i].start();
 		}
-		MainFrameGui frame = new MainFrameGui();
+		MainFrameGui myGui = new MainFrameGui();
+
 		return;
 	}
 }
