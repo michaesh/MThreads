@@ -25,6 +25,7 @@ public class MainFrame {
 			list[i].start();
 		}
 
+		
 		return;
 	}
 }
