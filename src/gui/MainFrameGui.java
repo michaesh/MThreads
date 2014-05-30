@@ -8,7 +8,7 @@ import javax.swing.*;
 public class MainFrameGui extends JFrame{
 	private static final int FWIDTH = 700, FHEIGHT = 700;
 	Vector<AgentGui> agentList = new Vector<AgentGui>();
-	
+	Rectangle rectangle;
 	
 	public MainFrameGui(){
 //		JFrame frame = new JFrame("Frame Demo");
@@ -30,10 +30,16 @@ public class MainFrameGui extends JFrame{
 		return;
 	}
 	
+	public void paintComponent(Graphics g){
+		Graphics2D g2 = (Graphics2D)g;
+		g2.setBackground(Color.black);
+		g2.draw(rectangle);
+	}
+	
 	public void display(){
 		if(!agentList.isEmpty()){
 			for(AgentGui agentGui:agentList){
-				agentGui.paint(null);
+				agentGui.paintComponent();
 			}
 		}		
 	}

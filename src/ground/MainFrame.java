@@ -24,8 +24,9 @@ public class MainFrame {
 		for(int i=0;i<50;i++){
 			list[i].start();
 		}
-
-		myGui.display();
+		
+		myGui.repaint();
+//		myGui.display();
 		
 		return;
 	}

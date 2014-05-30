@@ -4,7 +4,7 @@ import java.awt.*;
 import agent.*;
 
 
-public class AgentGui {
+public class AgentGui implements Gui{
 	Agent myAgent;
 	MainFrameGui mainframe;
 	private int xsize = 20, ysize = 20;
@@ -34,6 +34,12 @@ public class AgentGui {
 	public void paint(Graphics2D g){
 		g.draw(rectangle);
 		g.drawString(myAgent.getAgentName(), xloc, yloc);
+	}
+
+	@Override
+	public void updatePosition() {
+		// TODO Auto-generated method stub
+		
 	}
 
 	
