@@ -18,13 +18,14 @@ public class MainFrame {
 			list[i] = new Agent("a"+i,3,i+2);
 			guiList[i] = new AgentGui(list[i],myGui,5,5+5*i);
 			list[i].setGui(guiList[i]);
-//			guiList[i].paint(Graphics g);
+			myGui.addAgentGui(guiList[i]);
 		}
 		
 		for(int i=0;i<50;i++){
 			list[i].start();
 		}
 
+		myGui.display();
 		
 		return;
 	}

@@ -1,11 +1,14 @@
 package gui;
 
 import java.awt.*;
+import java.util.Vector;
+
 import javax.swing.*;
 
 public class MainFrameGui extends JFrame{
 	private static final int FWIDTH = 700, FHEIGHT = 700;
-	AgentGui[] agentList;
+	Vector<AgentGui> agentList = new Vector<AgentGui>();
+	
 	
 	public MainFrameGui(){
 //		JFrame frame = new JFrame("Frame Demo");
@@ -13,6 +16,7 @@ public class MainFrameGui extends JFrame{
 		this.setMinimumSize(new Dimension(FWIDTH,FHEIGHT));
 		this.setVisible(true);
 		this.setLayout(new BorderLayout());
+//		this.display();
 		return;
 	}
 	
@@ -21,5 +25,16 @@ public class MainFrameGui extends JFrame{
 		this.add(mybutton);
 	}
 	
+	public void addAgentGui(AgentGui g){
+		agentList.add(g);
+		return;
+	}
 	
+	public void display(){
+		if(!agentList.isEmpty()){
+			for(AgentGui agentGui:agentList){
+				agentGui.paint(null);
+			}
+		}		
+	}
 }
