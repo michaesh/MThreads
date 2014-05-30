@@ -3,7 +3,6 @@ package gui;
 import java.awt.*;
 import agent.*;
 
-
 public class AgentGui implements Gui{
 	Agent myAgent;
 	MainFrameGui mainframe;

@@ -25,7 +25,7 @@ public class Agent extends Thread{
 	/* Does numerical operation*/
 	public void run() {
 		while(number>1){
-			number = number*divisor;
+			number = number+divisor;
 			msg("Numner:"+number);
 		}
 	}

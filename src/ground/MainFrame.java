@@ -25,8 +25,6 @@ public class MainFrame {
 			list[i].start();
 		}
 		
-		myGui.repaint();
-//		myGui.display();
 		
 		return;
 	}
